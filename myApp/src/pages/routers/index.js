@@ -9,7 +9,8 @@ import {
 import { Button } from "antd";
 import Login from "../login";
 import Nav from "../nav";
-import RentDetail from "../rentDetail";
+import Assignment from "../assignment";
+import Detail from "../detail";
 
 export default class Routers extends Component {
   render() {
@@ -18,17 +19,8 @@ export default class Routers extends Component {
         <div>
           <Route path="/" exact component={Login} />
           <Route path="/home" component={Nav} />
-          <Route path="/rentDetail" component={Nav} />
-          <Route path="/rentPay" component={Nav} />
-          <Route path="/order" component={Nav} />
-          <Route path="/orderManage" component={Nav} />
-          <Route path="/myOrder" component={Nav} />
-          <Route path="/userManage" component={Nav} />
-          <Route path="/superManage" component={Nav} />
-          <Route path="/information" component={Nav} />
-          <Route path="/enter" component={Nav} />
-          <Route path="/self" component={Nav} />
-          <Route path="/moneyManage" component={Nav} />
+          <Route path="/assignment" component={Nav} />
+          <Route path="/detail" component={Nav} />
         </div>
       </Router>
     );

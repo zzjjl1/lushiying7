@@ -9,7 +9,6 @@ import Img_pearl from "./pearl.png";
 import Img_phone from "./phone.png";
 import Img_custom from "./custom.png";
 import Img_kefu from "./kefu.png";
-import Data from "../../json/account.json";
 
 class UserInfo extends Component {
   constructor() {
@@ -17,12 +16,6 @@ class UserInfo extends Component {
     this.state = {
       userName: {}
     };
-  }
-  componentWillMount() {
-    const userName = Data.data.filter(item => {
-      return item.userName == sessionStorage.userName;
-    });
-    this.setState({ userName: userName[0] });
   }
 
   render() {
@@ -61,7 +54,7 @@ class AdminInfo extends Component {
     return (
       <span className="admin-info">
         <a href="/">
-          <span className="admin-title">汽车租赁管理系统</span>
+          <span className="admin-title">第七战队牛逼</span>
         </a>
       </span>
     );

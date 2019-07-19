@@ -4,19 +4,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Layout, Menu, Icon } from "antd";
 import Head from "../header";
 import Home from "../home";
+import Assignment from "../assignment";
+import Detail from "../detail";
 
 import "./index.less";
-import RentDetail from "../rentDetail";
-import RentPay from "../rentPay";
-import Order from "../order";
-import OrderManage from "../orderManage";
-import MyOrder from "../myOrder";
-import UserManage from "../userManage";
-import SuperManage from "../superManage";
-import Information from "../information";
-import Enter from "../enter";
-import Self from "../self";
-import MoneyManage from "../moneyManage";
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -34,6 +25,12 @@ export default class Nav extends Component {
                   <Link to="/home">首页</Link>
                 </Menu.Item>
                 <Menu.Item key="2">
+                  <Link to="/assignment">任务页</Link>
+                </Menu.Item>
+                <Menu.Item key="3">
+                  <Link to="/detail">详情页</Link>
+                </Menu.Item>
+                {/* <Menu.Item key="2">
                   <Link to="/rentDetail">租车类型</Link>
                 </Menu.Item>
                 <SubMenu title="订单信息管理">
@@ -63,7 +60,7 @@ export default class Nav extends Component {
                 </SubMenu>
                 <Menu.Item key="6">
                   <Link to="/moneyManage">租赁财务管理</Link>
-                </Menu.Item>
+                </Menu.Item> */}
               </Menu>
             </Sider>
             <Layout
@@ -80,17 +77,8 @@ export default class Nav extends Component {
                 <Route>
                   <div>
                     <Route path="/home" component={Home} />
-                    <Route path="/rentDetail" component={RentDetail} />
-                    <Route path="/rentPay" component={RentPay} />
-                    <Route path="/order" component={Order} />
-                    <Route path="/orderManage" component={OrderManage} />
-                    <Route path="/myOrder" component={MyOrder} />
-                    <Route path="/userManage" component={UserManage} />
-                    <Route path="/superManage" component={SuperManage} />
-                    <Route path="/information" component={Information} />
-                    <Route path="/enter" component={Enter} />
-                    <Route path="/self" component={Self} />
-                    <Route path="/moneyManage" component={MoneyManage} />
+                    <Route path="/assignment" component={Assignment} />
+                    <Route path="/detail" component={Detail} />
                   </div>
                 </Route>
               </Content>

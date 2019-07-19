@@ -7,9 +7,7 @@ import {
   IndexRoute
 } from "react-router-dom";
 import { Button, Card, Input, message } from "antd";
-import account from "../../json/account.json";
 import axios from "axios";
-// import ajax from '../../common/request'
 import "./index.less";
 
 export default class Login extends Component {
@@ -110,22 +108,21 @@ export default class Login extends Component {
   }
 
   componentDidMount() {
-    this.setState({ userList: account.data });
   }
 
   login() {
-    axios({
-        method: "get",
-        url: "/game/demo/hello",
-        data:{}
-      }).then(res => {
-        if (res.data.ok) {
-          console.log('11111')
-        } else {
-          message.error(res.data.message);
-        }
-      });
-    // this.props.history.push("/home");
+    // axios({
+    //     method: "get",
+    //     url: "/game/demo/hello",
+    //     data:{}
+    //   }).then(res => {
+    //     if (res.data.ok) {
+    //       console.log('11111')
+    //     } else {
+    //       message.error(res.data.message);
+    //     }
+    //   });
+    this.props.history.push("/home");
     // const userInformation = this.state.userList.filter(item => {
     //   return item.userName == this.state.userName;
     // });

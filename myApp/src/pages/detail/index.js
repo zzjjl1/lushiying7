@@ -15,20 +15,15 @@ import {
   Cascader
 } from "antd";
 
-export default class Home extends Component {
+export default class Assignment extends Component {
   constructor() {
     super();
     this.state = {
-     
     };
   }
-
-
-
   render() {
-    const { showList } = this.state;
     return (
-      <div>首页</div>
+      <div>详情页</div>
     );
   }
 }
