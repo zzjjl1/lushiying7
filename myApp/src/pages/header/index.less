@@ -1,0 +1,250 @@
+.header-wrap {
+  font-size: 14px;
+  color: #fff;
+  padding: 0 0 0 0;
+  background: #1f2227;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  &:hover {
+    z-index: 1051;
+  }
+  img {
+    max-width: initial;
+  }
+  .breads {
+    li {
+      display: inline-block;
+      .sep {
+        display: inline-block;
+        margin: 0 6px;
+      }
+      &.last {
+        font-weight: bold;
+      }
+    }
+  }
+  .admin-info {
+    font-size: 21px;
+    color: #ffffff;
+  }
+  .admin-title {
+    margin-left: 24px;
+    color: #ffffff;
+    img {
+      width: 81px;
+      height: 24px;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+  .admin-icon {
+    color: #3b8ee2;
+  }
+  .h-menuitem {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: #96a3b3;
+    cursor: pointer;
+    user-select: none;
+    .h-menu-icon {
+      margin-right: 8px;
+      vertical-align: text-top;
+    }
+    .anticon-down {
+      // transition: transform 0.3s;
+    }
+    .popdown {
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      transform: translateX(-50%);
+      border-radius: 6px;
+      .popdown-arrow {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 14px;
+        height: 14px;
+        display: block;
+        background-color: #fff;
+        border-color: transparent;
+        transform: translate(-50%, -50%) rotate(45deg);
+        border-style: solid;
+      }
+      .popdown-inner {
+        // overflow: hidden;
+        border-radius: 6px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 15px;
+      height: 30px;
+      width: 1px;
+      background-color: #4c535c;
+    }
+    &:hover {
+      background-color: #14161a;
+      color: #fff;
+      .h-menu-icon {
+        filter: brightness(2);
+      }
+      .anticon-down {
+        transform: rotate(180deg);
+      }
+      .popdown {
+        color: #0c1d39;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 22px;
+      }
+    }
+  }
+  .user-info {
+    .popdown {
+      .popdown-inner {
+        overflow: hidden;
+        a {
+          display: block;
+          width: 136px;
+          line-height: 34px;
+          color: #0c1d39;
+          text-align: left;
+          padding-left: 40px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          // box-sizing: content-box;
+          &:hover {
+            background-color: #f7f7f7;
+          }
+        }
+      }
+    }
+  }
+  .user-manual {
+    padding-left: 30px;
+    margin-right: 40px;
+    background: url("./manual.png") no-repeat 0 20px;
+  }
+  .user-app {
+    .popdown {
+      .popdown-inner {
+      }
+    }
+  }
+  .user-pearl {
+    .new {
+      position: absolute;
+      display: block;
+      width: 22px;
+      height: 11px;
+      background: url("./new.png");
+      background-size: 100% 100%;
+      left: 12px;
+      top: 15px;
+    }
+    .recharge-btn {
+      width: 55px;
+      height: 26px;
+      font-size: 14px;
+      border-radius: 15px;
+      background: #00b890;
+      display: inline-block;
+      color: #fff;
+      line-height: 26px;
+      text-align: center;
+      margin-left: 20px;
+      position: relative;
+      .gift-icon {
+        position: absolute;
+        right: -25px;
+        top: -13px;
+      }
+    }
+    .popdown {
+      width: 280px;
+      padding: 30px 20px 20px;
+      .popdown-inner {
+        h3 {
+          font-size: 18px;
+          color: #1f2227;
+          letter-spacing: 0;
+          text-align: left;
+          line-height: 18px;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+        p {
+          height: 12px;
+          line-height: 12px;
+          margin-bottom: 20px;
+          span {
+            font-size: 12px;
+            color: #788092;
+            margin-right: 25px;
+          }
+        }
+        .recharge-btn {
+          border-radius: 20px;
+          width: 240px;
+          height: 40px;
+          font-size: 14px;
+          color: #ffffff;
+          letter-spacing: 0;
+          text-align: center;
+          line-height: 40px;
+          margin-left: 0;
+          margin-bottom: 20px;
+          display: block;
+        }
+        ul {
+          li {
+            a {
+              height: 44px;
+              width: 100%;
+              border-top: 1px solid #e4e6f0;
+              line-height: 44px;
+              position: relative;
+              display: block;
+              color: #333;
+              font-size: 14px;
+              .link {
+                text-align: left;
+                line-height: 14px;
+              }
+              &:after {
+                content: "\E61F";
+                font-size: 12px;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-family: anticon;
+                color: #d8d8d8;
+              }
+            }
+            a.buy {
+              background: url("./hot.png") no-repeat 60px 8px;
+              background-size: 60px 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

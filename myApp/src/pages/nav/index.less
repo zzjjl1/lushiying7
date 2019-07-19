@@ -1,0 +1,36 @@
+.page-home {
+  .ant-layout-sider {
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #2d333c;
+  }
+  .ant-menu {
+    background: #2d333c;
+    border: 0;
+    .ant-menu-item {
+      &:after {
+        display: none;
+      }
+    }
+    li {
+      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+    .ant-menu-submenu-arrow {
+      &:after {
+        background: #fff;
+      }
+      &:before {
+        background: #fff;
+      }
+    }
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #00b890;
+  }
+}

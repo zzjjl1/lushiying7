@@ -1,0 +1,245 @@
+@import './reset.less';
+@import "../../node_modules/antd/dist/antd.less";
+@import './antd_reset.less';
+
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix:after {
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.link {
+	cursor: pointer;
+	/*margin: 0 10px;*/
+	display: inline-block
+}
+.ant-table-content {
+	border: 1px solid #eee;
+	border-bottom: none;
+}
+
+.oneline {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 100px;
+}
+
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.label {
+  display: inline-block;
+  width: 96px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.check--wrapper {
+
+  .ant-checkbox-group {
+    display: inline;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+html h2 {
+  font-weight: bold;
+  font-size: 22px;
+  color: #454647;
+  letter-spacing: 0;
+  margin-top: 27px;
+  margin-bottom: 32px;
+}
+
+.label:before {
+  content: '* ';
+  color: #D0021B;
+  font-size: 14px;
+  visibility: hidden;
+  position: absolute;
+  left: -10px;
+}
+
+
+.required:before {
+  content: '* ';
+  color: #D0021B;
+  font-size: 14px;
+  visibility: visible;
+}
+
+
+.ui--error,
+.ui--error:hover {
+  border-color: #f04134 !important;
+  .ant-radio-inner {
+    border-color: #f04134 !important;
+  }
+  .ant-checkbox-inner {
+    border-color: #f04134 !important;
+  }
+}
+
+/*import CSSModules from 'react-css-modules'
+import styles from './index.styl'
+
+@CSSModules(styles, { allowMultiple: true }) */
+
+html h3 {
+  margin-top: 30px;
+  margin-bottom: 24px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bg--white {
+  background-color: #fff;
+}
+
+.page--white {
+  background: #fff;
+  padding-left: 40px;
+  position: relative;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 77px;
+    height: 100%;
+    background: #fff;
+    right: -77px;
+    top: 0;
+  }
+}
+body {
+  // overflow-x: hidden;
+}
+
+.app__disabled {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 69px;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.4);
+
+  &:before {
+    content: '不好意思，您没有权限操作哦~~';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+
+* {
+  animation-duration: 0s !important;
+}
+
+.error-monitor-modal {
+  position: fixed;
+  z-index: 1000000;
+  top: 100px;
+  left: 50%;
+  margin-left: -350px;
+  width: 700px;
+  background: white;
+  border: 1px solid black;
+  padding: 30px;
+  .log-list {
+    height: 500px;
+    overflow-y: scroll;
+    word-break: break-all;
+  }
+  .help-text {
+    color: grey;
+    margin-top: 1em;
+  }
+  .state {
+    padding: 1px 9px;
+    margin-right: 3px;
+    border-radius: 3px;
+    color: white;
+    &.success {
+      background: #3cb890;
+    }
+    &.error {
+      background: #f50c37;
+    }
+  }
+  .close {
+    position: absolute;
+    right: 0.6em;
+    top: 0;
+    font-size: 2em;
+    cursor: pointer;
+  }
+}
+
+
+
+.ant-modal {
+  .ant-modal-content {
+    padding: 30px 0;
+  }
+  .ant-modal-header {
+    border-bottom: none;
+    padding: 0px 21px 8px;
+  }
+  .ant-modal-body {
+    padding-left: 23px;
+  }
+  padding-left: 23px;
+  .ant-modal-footer {
+    border-top: none;
+    text-align: center;
+    .ant-btn {
+      min-width: 100px;
+    }
+  }
+}
+.header-color-modal {
+  .ant-modal-header {
+    margin-top: -30px;
+    height: 50px;
+    background: #F5FCFA;
+    &>div {
+      line-height: 50px;
+      height: 100%;
+      font-size: 14px;
+      color: #101D37;
+    }
+  }
+  .ant-modal-body {
+    padding-left: 30px;
+  }
+  .ant-modal-footer {
+    text-align: right;
+    padding-right: 30px;
+  }
+}

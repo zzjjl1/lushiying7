@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "userName": "chaoguan",
+      "passWord": "1",
+      "name": "超管一",
+      "phone": "15663802217",
+      "manage": "true",
+      "trueName": "超管一",
+      "idCard": "123456789987654321",
+      "email": "772617212@qq.com"
+    },
+    {
+      "userName": "zzjjl1",
+      "passWord": "123456789",
+      "name": "测试用户一",
+      "phone": "15663802218"
+    },
+    {
+      "userName": "zzjjl2",
+      "passWord": "123456789",
+      "name": "测试用户二",
+      "phone": "15663802218"
+    },
+    {
+      "userName": "zzjjl3",
+      "passWord": "123456789",
+      "name": "测试用户三",
+      "phone": "15663802218",
+      "trueName": "张三",
+      "idCard": "23456789987654321",
+      "email": "123456789@qq.com"
+    },
+    {
+      "userName": "zzjjl4",
+      "passWord": "123456789",
+      "name": "测试用户四",
+      "phone": "15663802218"
+    },
+    {
+      "userName": "zzjjl5",
+      "passWord": "123456789",
+      "name": "测试用户五",
+      "phone": "15663802218"
+    },
+    {
+      "userName": "zzjjl6",
+      "passWord": "123456789",
+      "name": "测试用户六",
+      "phone": "15663802218"
+    },
+    {
+      "userName": "zzjjl7",
+      "passWord": "123456789",
+      "name": "测试用户七",
+      "phone": "15663802218"
+    },
+    {
+      "userName": "chaoguan2",
+      "passWord": "1",
+      "name": "超管二",
+      "phone": "12346748483",
+      "manage": "true"
+    }
+  ]
+}
