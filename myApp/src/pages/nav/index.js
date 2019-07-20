@@ -6,6 +6,7 @@ import Head from "../header";
 import Home from "../home";
 import Assignment from "../assignment";
 import Detail from "../detail";
+import Trace from "../../common/trace"
 
 import "./index.less";
 
@@ -29,6 +30,9 @@ export default class Nav extends Component {
                 </Menu.Item>
                 <Menu.Item key="3">
                   <Link to="/detail">详情页</Link>
+                </Menu.Item>
+                <Menu.Item key="4">
+                  <Link to="/trace">跟进</Link>
                 </Menu.Item>
                 {/* <Menu.Item key="2">
                   <Link to="/rentDetail">租车类型</Link>
@@ -79,6 +83,7 @@ export default class Nav extends Component {
                     <Route path="/home" component={Home} />
                     <Route path="/assignment" component={Assignment} />
                     <Route path="/detail" component={Detail} />
+                    <Route path="/trace" component={Trace} />
                   </div>
                 </Route>
               </Content>
