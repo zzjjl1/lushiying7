@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { browserHistory } from "react-router";
 import FollowUpList from './cmps/follow-up-list';
 import {
-  Tabs
+  Tabs, Icon
 } from "antd";
 const { TabPane } = Tabs;
 import axios from 'axios'
@@ -45,6 +45,7 @@ export default class Assignment extends Component {
           </div>
         </div>
         <div className="bottom-area">
+
           <BasicInfoForm></BasicInfoForm>
         </div>
       </div>

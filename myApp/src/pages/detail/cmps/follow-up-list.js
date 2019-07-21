@@ -34,14 +34,14 @@ export default class Assignment extends Component {
     //   2:'满五唯一',
     // }
     // this.setState({followUpData:followUpData,tagsMap:tagsMap});
-    const params = {};
     this.getFollowUpData();
   };
   getFollowUpData = () => {
-    axios.get('http://172.20.10.6:8080/game/demo/hello')
+    const params = { houseCode: '123' };
+    axios.get('http://172.20.10.6:8888/api/followup/selection')
       .then(function (res) {
         console.log(res,'===============')
-        this.setState({followUpData:res.data.followUpData,tagsMap:res.data.tagsMap});
+        // this.setState({followUpData:res.data.followUpData,tagsMap:res.data.tagsMap});
       })
       .catch(function (error) {
         console.log(error);
