@@ -35,14 +35,18 @@ export default class Assignment extends Component {
     // }
     // this.setState({followUpData:followUpData,tagsMap:tagsMap});
     const params = {};
-    axios.get('',params)
+    this.getFollowUpData();
+  };
+  getFollowUpData = () => {
+    axios.get('http://172.20.10.6:8080/game/demo/hello')
       .then(function (res) {
+        console.log(res,'===============')
         this.setState({followUpData:res.data.followUpData,tagsMap:res.data.tagsMap});
       })
       .catch(function (error) {
         console.log(error);
       });
-  };
+  }
   render() {
     const { followUpData, tagsMap } = this.state;
     return (
@@ -53,9 +57,9 @@ export default class Assignment extends Component {
             <Timeline.Item>
               <p>跟进人：{item.followPerson}</p>
               <p>跟进时间：{item.followTime}</p>
-              {Object.getOwnPropertyNames(item.tagsInfo).map(key=>{
+              {Object.getOwnPropertyNames(item.tagsInfo).map(tagInfo=>{
                 return (
-                  <p>{tagsMap[key]} ：{item.tagsInfo[key]}</p>
+                  <p>{tagInfo.name} ：{tagInfo.value}</p>
                 )
               })}
             </Timeline.Item>
