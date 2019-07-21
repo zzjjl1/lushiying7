@@ -293,8 +293,10 @@ class BasicInfoForm extends React.Component {
             )}
           </Form.Item>
         </Form>
-        <Button type="primary" onClick={this.handleSave}>保存</Button>
-        <Button type="default" onClick={this.handleCancel}>保存</Button>
+        {isEdit?<div>
+          <Button type="primary" onClick={this.handleSave}>保存</Button>
+          <Button type="default" onClick={this.handleCancel}>取消</Button>
+        </div>:null}
       </div>
     );
   }
