@@ -46,10 +46,16 @@ import axios from "axios";
 
 
 var instance = axios.create({
-  baseURL: 'http://39.105.20.96:8080/',
-  timeout: 1000,
-  headers: sessionStorage.code?{'auth_code': sessionStorage.code}:null
+  baseURL: 'http://172.20.10.6:8888/',
+  timeout: 3000,
+  headers: {
+    'Content-Type': 'application/json'
+  }
 });
+
+export {
+  instance as Instance
+}
 export default function ajax(url,data){
   instance.post(url,data)
 }

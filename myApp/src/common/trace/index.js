@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Instance} from '../../common/request'
 import {
     Card,
     Modal,
@@ -32,6 +33,15 @@ export default class Trace extends Component {
         this.InputRef = null
         this.tagNameRef = null
     }
+    componentDidMount(){
+        Instance.get('/api/followup/selection').then(data => {
+            let list = data.data.data
+            const tagList = this.state.tagList
+            this.setState({
+                tagList: [...tagList, ...list]
+            })
+        })
+    }
     handleCancelTagName(){
         this.setState({
             isAddingNewTag: false
@@ -60,10 +70,11 @@ export default class Trace extends Component {
     }
     handleSave() {
         const data = {
-            uid: '26025530',
-            data: this.state.traceList.map(trace => ({key: trace.key, value: trace.value}))
+            ucid: '26025530',
+            house_code: '111111',
+            content: JSON.stringify(this.state.traceList.map(trace => ({key: trace.key, value: trace.value})))
         }
-        console.log(data)
+        Instance.post('/api/followup/add', data).then(msg => console.log(msg, 'msggggg'))
     }
     deleteTrace(id) {
         const traceList = this.state.traceList
@@ -120,7 +131,7 @@ export default class Trace extends Component {
     render() {
         const isShowAddButton = this.state.traceList.length !== 0
         const isAddingNewTag = this.state.isAddingNewTag
-        const tagList = [...HOTWORDS, ...this.state.tagList]
+        const tagList = this.state.tagList
 
         return (
             <div className="trace">
