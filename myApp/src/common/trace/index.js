@@ -59,7 +59,6 @@ export default class Trace extends Component {
         } else {
             message.warn('请输入合法的标签名')
         }
-
     }
     onSelectHotWord(selectedWord) {
         this.setState({
@@ -81,7 +80,10 @@ export default class Trace extends Component {
             console.log(msg, '新增跟进反馈')
             if (msg.data.errno === 0) {
                 message.success('新增成功')
-                this.props.onSucess && this.props.onSucess()
+                this.setState({
+                    traceList: []
+                })
+                this.props.onSuccess && this.props.onSuccess()
             }
         })
     }
@@ -144,42 +146,40 @@ export default class Trace extends Component {
         const { selectedWord } = this.state
         return (
             <div className="trace">
-                <Card>
-                    <div className="trace-hot-words-wrapper">
-                        {tagList.map(word => {
-                            return (
-                                <span className="trace-hot-word" onClick={() => { this.onSelectHotWord(word) }} key={word}>{word}</span>
+                <div className="trace-hot-words-wrapper">
+                    {tagList.map(word => {
+                        return (
+                            <span className="trace-hot-word" onClick={() => { this.onSelectHotWord(word) }} key={word}>{word}</span>
+                        )
+                    })}
+                    {
+                        isAddingNewTag ? (
+                            <div>
+                                <Input ref={ref => this.tagNameRef = ref} style={{ width: '130px' }} className="trace-m-r-5" size="small"></Input>
+                                <Button shape="circle" size="small" onClick={() => this.handleSaveTagName()} className="trace-m-r-5">√</Button>
+                                <Button shape="circle" size="small" onClick={() => this.handleCancelTagName()}>×</Button>
+                            </div>
+                        ) : (
+                                <Button shape="circle" size="small" onClick={() => this.setState({ isAddingNewTag: true })}>+</Button>
                             )
-                        })}
-                        {
-                            isAddingNewTag ? (
-                                <div>
-                                    <Input ref={ref => this.tagNameRef = ref} style={{ width: '130px' }} className="trace-m-r-5" size="small"></Input>
-                                    <Button shape="circle" size="small" onClick={() => this.handleSaveTagName()} className="trace-m-r-5">√</Button>
-                                    <Button shape="circle" size="small" onClick={() => this.handleCancelTagName()}>×</Button>
-                                </div>
-                            ) : (
-                                    <Button shape="circle" size="small" onClick={() => this.setState({ isAddingNewTag: true })}>+</Button>
-                                )
-                        }
-                    </div>
-                    <div className="trace-list">
-                        {
-                            this.state.traceList.map(trace => {
-                                return (
-                                    <Tag color="magenta" key={trace.id} closable onClose={() => this.deleteTrace(trace.id)}>
-                                        <span style={{ color: 'black', cursor: 'pointer', fontSize: '16px' }} onClick={() => this.handleModify(trace.id)}>{trace.key + ' : ' + trace.value}</span>
-                                    </Tag>
-                                )
-                            })
-                        }
-                    </div>
-                    <div className="trace-operation">
-                        {isShowAddButton ? (
-                            <Button onClick={() => this.handleSave()} type="primary">保存</Button>
-                        ) : null}
-                    </div>
-                </Card>
+                    }
+                </div>
+                <div className="trace-list">
+                    {
+                        this.state.traceList.map(trace => {
+                            return (
+                                <Tag color="magenta" key={trace.id} closable onClose={() => this.deleteTrace(trace.id)}>
+                                    <span style={{ color: 'black', cursor: 'pointer', fontSize: '16px' }} onClick={() => this.handleModify(trace.id)}>{trace.key + ' : ' + trace.value}</span>
+                                </Tag>
+                            )
+                        })
+                    }
+                </div>
+                <div className="trace-operation">
+                    {isShowAddButton ? (
+                        <Button onClick={() => this.handleSave()} type="primary">保存</Button>
+                    ) : null}
+                </div>
                 <Modal
                     title="输入跟进信息"
                     cancelText="取消"

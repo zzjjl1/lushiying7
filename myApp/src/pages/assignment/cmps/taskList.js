@@ -84,7 +84,7 @@ export default class Assignment extends Component {
     // console.log('params', pagination, filters, sorter);
   }
   componentDidMount() {
-    HouseInstance.get('/task/list').then(data => console.log(data))
+    HouseInstance.get('/house/detail').then(data => console.log(data))
   };
   showList(row){
     // const {expandedRowKeys} = this.state
@@ -101,92 +101,92 @@ export default class Assignment extends Component {
     
   }
   render() {
-    const { tableData } = this.state;
-    // const expandId = expandedRowKeys[0]
-    // const columns = [
-    //   {
-    //     title: '任务分类',
-    //     dataIndex: 'type',
-    //     key: 'type',
-    //     width: 50,
-    //     filters: [
-    //       {
-    //         text: 'Joe',
-    //         value: 'Joe',
-    //       },
-    //       {
-    //         text: 'Jim',
-    //         value: 'Jim',
-    //       },
-    //       {
-    //         text: 'Submenu',
-    //         value: 'Submenu',
-    //         children: [
-    //           {
-    //             text: 'Green',
-    //             value: 'Green',
-    //           },
-    //           {
-    //             text: 'Black',
-    //             value: 'Black',
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //     onFilter: (value, record) => record.name.indexOf(value) === 0,
-    //     sorter: (a, b) => a.name.length - b.name.length,
-    //     sortDirections: ['descend'],
-    //     align: 'center'
-    //   },
-    //   {
-    //     title: '任务状态',
-    //     dataIndex: 'status',
-    //     key: 'status',
-    //     width: 50,
-    //     defaultSortOrder: 'descend',
-    //     sorter: (a, b) => a.age - b.age,
-    //     align: 'center'
-    //   },
-    //   {
-    //     title: '任务名称',
-    //     dataIndex: 'name',
-    //     key: 'taskName',
-    //     width: 50,
-    //     align: 'center'
-    //   },
-    //   {
-    //     title: '任务规则',
-    //     dataIndex: 'rule',
-    //     key: 'rule',
-    //     render(text){
-    //       return renderLongText(text)
-    //     },
-    //     align: 'center'
-    //   },
-    //   {
-    //     title: '奖励',
-    //     dataIndex: 'price',
-    //     key: 'price',
-    //     render(text){
-    //       return renderLongText(text)
-    //     },
-    //     align: 'center'
-    //   },
-    //   {
-    //     title: '任务到期时间',
-    //     dataIndex: 'time',
-    //     key: 'time',
-    //     maxWidth: 50,
-    //     tooltip: true,
-    //     align: 'center'
-    //   },
-    //   {
-    //     title: '操作',
-    //     key: 'operation',
-    //     render: (text, row) => <Button type="primary" onClick={() => this.showList(row)}>{row.id === expandId ? '关闭任务详情' : '查看任务详情'}</Button>,
-    //     align: 'center'
-    //   },
-    // ];
+    const { followUpData, tagsMap, expandedRowKeys } = this.state;
+    const expandId = expandedRowKeys[0]
+    const columns = [
+      {
+        title: '任务分类',
+        dataIndex: 'type',
+        key: 'type',
+        width: 50,
+        filters: [
+          {
+            text: 'Joe',
+            value: 'Joe',
+          },
+          {
+            text: 'Jim',
+            value: 'Jim',
+          },
+          {
+            text: 'Submenu',
+            value: 'Submenu',
+            children: [
+              {
+                text: 'Green',
+                value: 'Green',
+              },
+              {
+                text: 'Black',
+                value: 'Black',
+              },
+            ],
+          },
+        ],
+        onFilter: (value, record) => record.name.indexOf(value) === 0,
+        sorter: (a, b) => a.name.length - b.name.length,
+        sortDirections: ['descend'],
+        align: 'center'
+      },
+      {
+        title: '任务状态',
+        dataIndex: 'status',
+        key: 'status',
+        width: 50,
+        defaultSortOrder: 'descend',
+        sorter: (a, b) => a.age - b.age,
+        align: 'center'
+      },
+      {
+        title: '任务名称',
+        dataIndex: 'name',
+        key: 'taskName',
+        width: 50,
+        align: 'center'
+      },
+      {
+        title: '任务规则',
+        dataIndex: 'rule',
+        key: 'rule',
+        render(text){
+          return renderLongText(text)
+        },
+        align: 'center'
+      },
+      {
+        title: '奖励',
+        dataIndex: 'price',
+        key: 'price',
+        render(text){
+          return renderLongText(text)
+        },
+        align: 'center'
+      },
+      {
+        title: '任务到期时间',
+        dataIndex: 'time',
+        key: 'time',
+        maxWidth: 50,
+        tooltip: true,
+        align: 'center'
+      },
+      {
+        title: '操作',
+        key: 'operation',
+        render: (text, row) => <Button type="primary" onClick={() => this.showList(row)}>{row.id === expandId ? '关闭任务详情' : '查看任务详情'}</Button>,
+        align: 'center'
+      },
+    ];
     // const data = [
     //   {
     //     id: 1,
@@ -208,7 +208,7 @@ export default class Assignment extends Component {
     // ];
     return (
       <div className="task-list">
-        <Table columns={this.columns} dataSource={tableData} onChange={this.onChange} rowKey="id"/>
+        <Table columns={columns} dataSource={this.state.tableData} onChange={this.onChange} rowKey="id"/>
       </div>
     );
   }

@@ -53,7 +53,7 @@ const instance = axios.create({
   }
 });
 const HouseInstance = axios.create({
-  baseURL: 'http://192.168.43.127:8888/',
+  baseURL: 'http://47.106.74.64:8888/',
   timeout: 3000,
   headers: {
     'Content-Type': 'application/json'
