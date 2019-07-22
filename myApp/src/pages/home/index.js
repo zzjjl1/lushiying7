@@ -85,7 +85,7 @@ export default class Home extends Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-          <p>一周内累计补全10套房源的基本信息，则表示任务完成，并发放贝壳币奖励和“房源卫士”称号</p>
+          <p>一周内累计补全10套房源的基本信息，则表示任务完成，并发放20贝壳币奖励。</p>
         </Modal>
       </div>
     );
