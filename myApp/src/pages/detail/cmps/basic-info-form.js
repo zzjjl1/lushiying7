@@ -13,6 +13,10 @@ class BasicInfoForm extends React.Component {
       tagsMap: {},
       basicInfo: {},
       isEdit: false,
+      haveHotWater: '',
+      haveElevator: '',
+      haveGas: '',
+      haveZhongshui: '',
     };
   }
   componentDidMount() {
@@ -23,30 +27,36 @@ class BasicInfoForm extends React.Component {
     let _this = this;
     axios.get('http://47.106.74.64:8888/house/detail',{
       params: {
-        userId: 1,
+        userId: 10,
         code: 1,
       }
     })
       .then(function (res) {
-        _this.setState({basicInfo: res.data.data},()=>{_this.setDetail()});
+        res.data.data?_this.setState({basicInfo: res.data.data},()=>{_this.setDetail()}):null;
       })
       .catch(function (error) {
         console.log(error);
       });
   }
   setDetail = () => {
-    const { setFieldsValue } = this.props.form;
-    const {
+    const { setFieldsValue, setFields } = this.props.form;
+    let {
       province, bizCicle, propertyCost, tradingAuthority, buildingStructure, propertyYear, ladderRatio,
       houseUse, buildingType, buildingYear, hauntHouse, disgustingFacility,
-      heatingType, electricityType, parkingRatio, parkingCost, heatingCost, waterType, groundCarCount, haveElevator,
-      haveGas, gasCost, undergroundCarCount, haveHotWater, hotWaterCost, communityKindergarten, haveZhongshui, zhongshuiCost
+      heatingType, electricityType, parkingRatio, parkingCost, heatingCost, waterType, groundCarCount,
+      gasCost, undergroundCarCount, hotWaterCost, communityKindergarten, zhongshuiCost,
+      haveHotWater, haveElevator, haveGas, haveZhongshui
     } = this.state.basicInfo;
+    haveHotWater=haveHotWater==='1'?'是':'否';
+    haveElevator=haveElevator==='1'?'是':'否';
+    haveGas=haveGas==='1'?'是':'否';
+    haveZhongshui=haveZhongshui==='1'?'是':'否';
     setFieldsValue({
       province, bizCicle, propertyCost, tradingAuthority, buildingStructure, propertyYear, ladderRatio,
       houseUse, buildingType, buildingYear, hauntHouse, disgustingFacility,
-      heatingType, electricityType, parkingRatio, parkingCost, heatingCost, waterType, groundCarCount, haveElevator,
-      haveGas, gasCost, undergroundCarCount, haveHotWater, hotWaterCost, communityKindergarten, haveZhongshui, zhongshuiCost
+      heatingType, electricityType, parkingRatio, parkingCost, heatingCost, waterType, groundCarCount,
+      gasCost, undergroundCarCount, hotWaterCost, communityKindergarten, zhongshuiCost,
+      haveHotWater, haveElevator, haveGas, haveZhongshui
     })
   }
   editBasicInfo = () => {
@@ -56,16 +66,17 @@ class BasicInfoForm extends React.Component {
     e.preventDefault();
     let _this = this;
     let formData = this.props.form.getFieldsValue();
-    formData.userId = 1;
+    formData.userId = 10;
     let data = {"houseDTO": formData};
-    axios.post('http://47.106.74.64:8888/house/addOrEdit',data)
+    // axios.post('http://47.106.74.64:8888/house/addOrEdit',data)
+    axios.post('http://172.20.10.11:8888/house/addOrEdit',data)
       .then(function (res) {
         message.success('修改成功！');
         _this.getDetail();
       })
       .catch(function (error) {
         console.log(error);
-        message.success('修改失败！');
+        message.error('修改失败！');
         _this.handleCancel();
       });
   };
@@ -294,8 +305,10 @@ class BasicInfoForm extends React.Component {
             </Col>
             <Col span="8">
               <Form.Item label='是否有电梯' >
-                {getFieldDecorator('haveElevator')(
-                  <Select initialValue="1" disabled={!isEdit}>
+                {getFieldDecorator('haveElevator',{
+                  initialValue: '1',
+                })(
+                  <Select disabled={!isEdit} >
                     <Option value="1">是</Option>
                     <Option value="0">否</Option>
                   </Select>,
@@ -304,8 +317,10 @@ class BasicInfoForm extends React.Component {
             </Col>
             <Col span="8">
               <Form.Item label='是否有燃气' >
-                {getFieldDecorator('haveGas')(
-                  <Select initialValue="1" disabled={!isEdit}>
+                {getFieldDecorator('haveGas',{
+                  initialValue: '1',
+                })(
+                  <Select disabled={!isEdit} >
                     <Option value="1">是</Option>
                     <Option value="0">否</Option>
                   </Select>,
@@ -336,10 +351,12 @@ class BasicInfoForm extends React.Component {
             </Col>
             <Col span="8">
               <Form.Item label='是否有热水' >
-                {getFieldDecorator('haveHotWater')(
-                  <Select initialValue="1" disabled={!isEdit}>
-                    <Option value="1">是</Option>
-                    <Option value="0">否</Option>
+                {getFieldDecorator('haveHotWater',{
+                  initialValue: '1',
+                })(
+                  <Select disabled={!isEdit} >
+                    <Option key="1" value="1">是</Option>
+                    <Option key="0" value="0">否</Option>
                   </Select>,
                 )}
               </Form.Item>
@@ -368,8 +385,10 @@ class BasicInfoForm extends React.Component {
             </Col>
             <Col span="8">
               <Form.Item label='是否有中水' >
-                {getFieldDecorator('haveZhongshui')(
-                  <Select initialValue="1" disabled={!isEdit}>
+                {getFieldDecorator('haveZhongshui',{
+                  initialValue: '1',
+                })(
+                  <Select  disabled={!isEdit} >
                     <Option value="1">是</Option>
                     <Option value="0">否</Option>
                   </Select>,
