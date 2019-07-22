@@ -26,6 +26,7 @@ class BasicInfoForm extends React.Component {
   getDetail = () => {
     let _this = this;
     axios.get('http://47.106.74.64:8888/house/detail',{
+    // axios.get('http://172.20.10.11:8888/house/detail',{
       params: {
         userId: 10,
         code: 1,
@@ -67,12 +68,18 @@ class BasicInfoForm extends React.Component {
     let _this = this;
     let formData = this.props.form.getFieldsValue();
     formData.userId = 10;
-    let data = {"houseDTO": formData};
-    // axios.post('http://47.106.74.64:8888/house/addOrEdit',data)
-    axios.post('http://172.20.10.11:8888/house/addOrEdit',data)
+    formData.code = '1';
+    formData.haveHotWater=formData.haveHotWater==='是'?'1':'0';
+    formData.haveElevator=formData.haveElevator==='是'?'1':'0';
+    formData.haveGas=formData.haveGas==='是'?'1':'0';
+    formData.haveZhongshui=formData.haveZhongshui==='是'?'1':'0';
+    let data = formData;
+    axios.post('http://47.106.74.64:8888/house/addOrEdit',data)
+    // axios.post('http://172.20.10.11:8888/house/addOrEdit',data)
       .then(function (res) {
         message.success('修改成功！');
         _this.getDetail();
+        _this.setState({isEdit: false})
       })
       .catch(function (error) {
         console.log(error);
@@ -308,7 +315,7 @@ class BasicInfoForm extends React.Component {
                 {getFieldDecorator('haveElevator',{
                   initialValue: '1',
                 })(
-                  <Select disabled={!isEdit} >
+                  <Select disabled={!isEdit} labelIn>
                     <Option value="1">是</Option>
                     <Option value="0">否</Option>
                   </Select>,
