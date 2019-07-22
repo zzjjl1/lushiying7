@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e7b38754-1bfb-4049-a8e8-1a0ac0127ac1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/src/pages/detail/cmps/basic-info-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/myApp/src/pages/detail/cmps/basic-info-form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myApp/src/pages/detail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myApp/src/pages/detail/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myApp/src/pages/detail/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/myApp/src/pages/detail/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myApp/src/pages/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/myApp/src/pages/nav/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,39 +27,39 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="14" />
+          <entry key="js" value="16" />
           <entry key="less" value="13" />
-          <entry key="png" value="1" />
+          <entry key="png" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="1" />
-          <entry key="JavaScript" value="14" />
+          <entry key="Image" value="2" />
+          <entry key="JavaScript" value="16" />
           <entry key="Less" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="4297" />
-          <entry key="less" value="520" />
+          <entry key="js" value="4804" />
+          <entry key="less" value="546" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="4297" />
-          <entry key="Less" value="520" />
+          <entry key="JavaScript" value="4804" />
+          <entry key="Less" value="546" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/cmps/basic-info-form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+            <state relative-caret-position="315">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#3083#3303#0" />
@@ -78,6 +80,7 @@
                 <element signature="e#8287#8509#0" />
                 <element signature="e#8598#8846#0" />
                 <element signature="e#9001#9256#0" />
+                <element signature="e#9317#9631#0" />
                 <element signature="e#9631#9912#0" />
                 <element signature="e#10066#10358#0" />
                 <element signature="e#10371#10679#0" />
@@ -94,11 +97,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/src/pages/nav/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="380">
+              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -106,12 +118,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="262">
+              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#197#218#0" expanded="true" />
+                <element signature="e#281#302#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/src/pages/header/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -119,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myApp/src/pages/assignment/cmps/taskList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1252">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            <state relative-caret-position="-504">
+              <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -131,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/cmps/follow-up-list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+            <state relative-caret-position="-187">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -158,12 +179,18 @@
       <find>haveHotWater</find>
       <find>initialValue</find>
       <find>value</find>
+      <find>dev_hqx_trace</find>
+      <find>输入跟进信息</find>
+      <find>Img_pearl</find>
+      <find>img</find>
       <find>select</find>
+      <find>isEdit</find>
     </findStrings>
     <dirStrings>
+      <dir>$PROJECT_DIR$/myApp/src/pages</dir>
+      <dir>$PROJECT_DIR$/myApp</dir>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/myApp/src</dir>
-      <dir>$PROJECT_DIR$/myApp/src/pages</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -183,9 +210,10 @@
         <option value="$PROJECT_DIR$/myApp/src/pages/assignment/index.less" />
         <option value="$PROJECT_DIR$/myApp/src/pages/assignment/cmps/taskList.js" />
         <option value="$PROJECT_DIR$/myApp/src/pages/detail/cmps/follow-up-list.js" />
-        <option value="$PROJECT_DIR$/myApp/src/pages/detail/cmps/basic-info-form.js" />
-        <option value="$PROJECT_DIR$/myApp/src/pages/detail/index.js" />
         <option value="$PROJECT_DIR$/myApp/src/pages/detail/index.less" />
+        <option value="$PROJECT_DIR$/myApp/src/pages/nav/index.js" />
+        <option value="$PROJECT_DIR$/myApp/src/pages/detail/index.js" />
+        <option value="$PROJECT_DIR$/myApp/src/pages/detail/cmps/basic-info-form.js" />
       </list>
     </option>
   </component>
@@ -203,8 +231,9 @@
       <path value="$PROJECT_DIR$/myApp/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-193" />
+    <option name="y" value="178" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -260,8 +289,7 @@
               <item name="myApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="cmps" type="462c0819:PsiDirectoryNode" />
+              <item name="detail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lushiying7" type="b2602c69:ProjectViewProjectNode" />
@@ -270,6 +298,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="detail" type="462c0819:PsiDirectoryNode" />
+              <item name="cmps" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -310,7 +339,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33262000" />
+    <option name="totallyTimeSpent" value="37878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -322,10 +351,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="-193" y="178" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1564482" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24876674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -448,8 +477,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/cmps/follow-up-list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        <state relative-caret-position="-187">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -458,18 +487,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myApp/src/pages/assignment/cmps/taskList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1252">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        <state relative-caret-position="-504">
+          <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/src/Images/fangyuan.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/src/pages/header/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/src/pages/nav/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#281#302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/cmps/basic-info-form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="315">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#3083#3303#0" />
@@ -490,6 +554,7 @@
             <element signature="e#8287#8509#0" />
             <element signature="e#8598#8846#0" />
             <element signature="e#9001#9256#0" />
+            <element signature="e#9317#9631#0" />
             <element signature="e#9631#9912#0" />
             <element signature="e#10066#10358#0" />
             <element signature="e#10371#10679#0" />
@@ -502,27 +567,6 @@
             <element signature="e#12001#12405#0" />
             <element signature="e#11889#12176#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#197#218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/src/Images/fangyuan.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/src/pages/detail/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
         </state>
       </provider>
     </entry>

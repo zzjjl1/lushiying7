@@ -30,18 +30,7 @@ export default class Nav extends Component {
                 </Menu.Item>
                 <Menu.Item key="3">
                   <Link to="/detail">详情页</Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </Menu.Item>
-                <Menu.Item key="4">
-                  <Link to="/trace">跟进</Link>
-                </Menu.Item>
-=======
                 </Menu.Item> */}
->>>>>>> 35bc018083a3dd0e23a59d9d3336b884e974276b
-=======
-                </Menu.Item> */}
->>>>>>> dev_hqx_trace
                 {/* <Menu.Item key="2">
                   <Link to="/rentDetail">租车类型</Link>
                 </Menu.Item>

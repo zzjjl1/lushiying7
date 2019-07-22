@@ -12,14 +12,16 @@ import {
 const { TabPane } = Tabs;
 import './index.less'
 import BasicInfoForm from './cmps/basic-info-form';
-import fyImage from '../../Images/fangyuan.png'
+import FyImage from '../../Images/fangyuan.png';
 
 export default class Assignment extends Component {
   constructor() {
     super();
     this.state = {
       isShowTraceModal: false,
-      followUpData: []
+      followUpData: [],
+      activeKey: '1',
+      editStatus: '',
     };
   }
   handleChangeTabs = () => {
@@ -37,13 +39,19 @@ export default class Assignment extends Component {
         console.log(error);
       });
   }
+  handleChangeHouseInfoTab = () => {
+
+  }
+  goToEdit = () => {
+    this.setState({activeKey:'2', isShowTraceModal: false, editStatus:'true'})
+  }
   render() {
     return (
       <div className="house-detail">
         <div className="top-area">
           <Button style={{ position: 'absolute', right: '10px', bottom: '20px',zIndex: 10 }} shape="circle" size="large" onClick={() => this.setState({ isShowTraceModal: true })}>+</Button>
           <div className="left-area">
-            <img src={fyImage} alt=""/>
+            <img src={FyImage} alt=""/>
           </div>
           <div className="right-area">
             <Tabs onChange={this.handleChangeTabs} type="card">
@@ -65,11 +73,27 @@ export default class Assignment extends Component {
           </div>
         </div>
         <div className="bottom-area">
-          <BasicInfoForm></BasicInfoForm>
+          <Tabs defaultActiveKey={this.state.activeKey} onChange={this.handleChangeHouseInfoTab}>
+            <TabPane tab="维护信息" key="1">
+              维护信息表单
+            </TabPane>
+            <TabPane tab="基础信息" key="2">
+              <BasicInfoForm editStatus={this.editStatus}></BasicInfoForm>
+            </TabPane>
+            <TabPane tab="经纪人点评" key="3">
+              经纪人点评
+            </TabPane>
+            <TabPane tab="房主自荐" key="4">
+              房主自荐
+            </TabPane>
+            <TabPane tab="经纪人点评" key="5">
+              经纪人点评
+            </TabPane>
+          </Tabs>
         </div>
         <Modal
           visible={this.state.isShowTraceModal}
-          title="输入跟进信息"
+          title={<div><label>输入跟进信息</label><a onClick={this.goToEdit}>填房源基础信息，发贝壳币、赢专属展位</a></div>}
           cancelText="取消"
           okText="确认"
           footer={null}

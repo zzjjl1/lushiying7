@@ -23,6 +23,9 @@ class BasicInfoForm extends React.Component {
     this.props.form.validateFields();
     this.getDetail();
   }
+  componentWillReceiveProps(nextProps) {
+    this.setState({isEdit:true})
+  }
   getDetail = () => {
     let _this = this;
     axios.get('http://47.106.74.64:8888/house/detail',{
