@@ -32,7 +32,7 @@ class BasicInfoForm extends React.Component {
   setDetail = () => {
     const { basicInfo } = this.state;
     const { setFieldsValue } = this.props.form;
-    setFieldsValue({city:basicInfo.city})
+    setFieldsValue({city:basicInfo.city?'123':basicInfo.city})
   }
   editBasicInfo = () => {
     this.setState({isEdit:true})
@@ -51,7 +51,7 @@ class BasicInfoForm extends React.Component {
   };
   handleCancel = () => {
     this.setDetail();
-    this.setState({isEdit:true});
+    this.setState({isEdit:false});
   }
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -222,7 +222,7 @@ class BasicInfoForm extends React.Component {
           </Form.Item>
           <Form.Item label='是否有电梯' >
             {getFieldDecorator('area')(
-              <Select defaultValue="1" disabled={!isEdit}>
+              <Select initialValue="1" disabled={!isEdit}>
                 <Option value="1">是</Option>
                 <Option value="0">否</Option>
               </Select>,
@@ -230,7 +230,7 @@ class BasicInfoForm extends React.Component {
           </Form.Item>
           <Form.Item label='是否有燃气' >
             {getFieldDecorator('price')(
-              <Select defaultValue="1" disabled={!isEdit}>
+              <Select initialValue="1" disabled={!isEdit}>
                 <Option value="1">是</Option>
                 <Option value="0">否</Option>
               </Select>,
@@ -254,7 +254,7 @@ class BasicInfoForm extends React.Component {
           </Form.Item>
           <Form.Item label='是否有热水' >
             {getFieldDecorator('price')(
-              <Select defaultValue="1" disabled={!isEdit}>
+              <Select initialValue="1" disabled={!isEdit}>
                 <Option value="1">是</Option>
                 <Option value="0">否</Option>
               </Select>,
@@ -278,7 +278,7 @@ class BasicInfoForm extends React.Component {
           </Form.Item>
           <Form.Item label='是否有中水' >
             {getFieldDecorator('price')(
-              <Select defaultValue="1" disabled={!isEdit}>
+              <Select initialValue="1" disabled={!isEdit}>
                 <Option value="1">是</Option>
                 <Option value="0">否</Option>
               </Select>,

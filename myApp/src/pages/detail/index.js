@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import { browserHistory } from "react-router";
 import FollowUpList from './cmps/follow-up-list';
 import {
-  Tabs, Icon
+  Tabs,
 } from "antd";
 const { TabPane } = Tabs;
-import axios from 'axios'
 import './index.less'
 import BasicInfoForm from './cmps/basic-info-form'
 
