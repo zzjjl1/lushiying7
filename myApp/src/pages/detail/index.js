@@ -12,7 +12,6 @@ import {
 const { TabPane } = Tabs;
 import './index.less'
 import BasicInfoForm from './cmps/basic-info-form';
-import fyImage from '../../Images/fangyuan.png'
 
 export default class Assignment extends Component {
   constructor() {
@@ -43,7 +42,6 @@ export default class Assignment extends Component {
         <div className="top-area">
           <Button style={{ position: 'absolute', right: '10px', bottom: '20px',zIndex: 10 }} shape="circle" size="large" onClick={() => this.setState({ isShowTraceModal: true })}>+</Button>
           <div className="left-area">
-            <img src={fyImage} alt=""/>
           </div>
           <div className="right-area">
             <Tabs onChange={this.handleChangeTabs} type="card">
