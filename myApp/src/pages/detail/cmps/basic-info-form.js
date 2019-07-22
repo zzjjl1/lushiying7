@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { browserHistory } from "react-router";
 import axios from 'axios'
-import { Form, Icon, Input, Button, Select, message, Row, Col } from 'antd';
+import { Form, Icon, Input, Button, Select, message, Row, Col, Tag, Popover } from 'antd';
 
 const {Option} = Select
 
@@ -98,10 +98,23 @@ class BasicInfoForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
     const { isEdit } = this.state;
     const { formLayout } = this.state;
+    const popoverStyle = {width:'500px'}
+    const content = (
+      <div>
+        <p>任务名称:补全10套房源的基本信息</p>
+        <p>任务规则:一周内累计共补全10套房源的基本信息，则表示任务完成，并发放贝壳币奖励和"房源保护者"称号</p>
+        <p>任务奖励:20个贝壳币和为期一周的"房源保护者称号</p>
+        <p>到期时间:每周日23：59</p>
+      </div>
+    );
+
     return (
       <div className="form-area">
         <div className="bottom-area-title">
           <label className="title-label">基础信息</label>
+          <Popover content={content} title="任务详情" overlayClassName={popoverStyle}>
+            <Tag color="#87d068">填信息，发贝壳币，赢专属展位 详情></Tag>
+          </Popover>,
           <div className="edit-label" onClick={this.editBasicInfo}>
             <Icon type="edit" /><label style={{cursor: 'pointer'}}>补充&纠错</label>
           </div>

@@ -7,7 +7,8 @@ import Trace from '../../common/trace'
 import {
   Tabs,
   Button,
-  Modal
+  Modal,
+  Tag
 } from "antd";
 const { TabPane } = Tabs;
 import './index.less'
@@ -38,8 +39,9 @@ export default class Assignment extends Component {
         console.log(error);
       });
   }
-  handleChangeHouseInfoTab = () => {
-
+  handleChangeHouseInfoTab = (checked) => {
+    this.setState({activeKey:checked})
+    debugger
   }
   goToEdit = () => {
     this.setState({activeKey:'2', isShowTraceModal: false, editStatus:'true'})
@@ -71,7 +73,7 @@ export default class Assignment extends Component {
           </div>
         </div>
         <div className="bottom-area">
-          <Tabs defaultActiveKey={this.state.activeKey} onChange={this.handleChangeHouseInfoTab}>
+          <Tabs activeKey={this.state.activeKey} onChange={this.handleChangeHouseInfoTab}>
             <TabPane tab="维护信息" key="1">
               维护信息表单
             </TabPane>
