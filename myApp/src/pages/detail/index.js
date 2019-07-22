@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { browserHistory } from "react-router";
 import FollowUpList from './cmps/follow-up-list';
+import axios from 'axios'
+
 import Trace from '../../common/trace'
 import {
   Tabs,
@@ -15,11 +17,24 @@ export default class Assignment extends Component {
   constructor() {
     super();
     this.state = {
-      isShowTraceModal: false
+      isShowTraceModal: false,
+      followUpData: []
     };
   }
   handleChangeTabs = () => {
 
+  }
+  componentDidMount(){
+    this.getFollowUpData()
+  }
+  getFollowUpData () {
+    axios.get('http://47.106.74.64:8888/api/followup/listCards?house_code=111111')
+      .then((res) => {
+        this.setState({followUpData:res.data.data});
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
   render() {
     return (
@@ -33,7 +48,7 @@ export default class Assignment extends Component {
             <Tabs onChange={this.handleChangeTabs} type="card">
               <TabPane tab="跟进" key="1">
                 <div className="follow-up-tab-cont">
-                  <FollowUpList />
+                  <FollowUpList followUpData={this.state.followUpData}/>
                 </div>
               </TabPane>
               <TabPane tab="带看" key="2">
@@ -59,7 +74,7 @@ export default class Assignment extends Component {
           footer={null}
           onCancel={() => this.setState({isShowTraceModal: false})}
         >
-          <Trace onSuccess={() => { this.setState({ isShowTraceModal: false }) }}></Trace>
+          <Trace onSuccess={() => { this.setState({ isShowTraceModal: false });this.getFollowUpData() }}></Trace>
         </Modal>
       </div>
     );

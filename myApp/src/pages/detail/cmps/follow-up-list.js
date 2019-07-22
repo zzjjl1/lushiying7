@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { browserHistory } from "react-router";
-import axios from 'axios'
 import { Timeline } from 'antd';
 import moment from 'moment';
 export default class Assignment extends Component {
@@ -11,20 +10,8 @@ export default class Assignment extends Component {
       tagsMap:{},
     };
   }
-  componentDidMount(){
-    this.getFollowUpData()
-  };
-  getFollowUpData = () => {
-    axios.get('http://172.20.10.10:8888/api/followup/listCards?house_code=111111')
-      .then((res) => {
-        this.setState({followUpData:res.data.data});
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
   render() {
-    const { followUpData } = this.state;
+    const { followUpData } = this.props;
     return (
       <div className="follow-up-list-area">
         <Timeline>

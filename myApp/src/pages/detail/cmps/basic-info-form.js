@@ -100,7 +100,7 @@ class BasicInfoForm extends React.Component {
         <div className="bottom-area-title">
           <label className="title-label">基础信息</label>
           <div className="edit-label" onClick={this.editBasicInfo}>
-            <Icon type="edit" /><label>补充&纠错</label>
+            <Icon type="edit" /><label style={{cursor: 'pointer'}}>补充&纠错</label>
           </div>
         </div>
         <Form layout="inline" onSubmit={this.handleSubmit} >
