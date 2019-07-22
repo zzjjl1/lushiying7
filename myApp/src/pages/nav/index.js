@@ -7,7 +7,7 @@ import Home from "../home";
 import Assignment from "../assignment";
 import Detail from "../detail";
 import Trace from "../../common/trace"
-
+import FangYuan from '../fangyuan'
 import "./index.less";
 
 const { SubMenu } = Menu;
@@ -24,6 +24,9 @@ export default class Nav extends Component {
               <Menu mode="inline" defaultSelectedKeys={["1"]}>
                 <Menu.Item key="1">
                   <Link to="/home">任务中心</Link>
+                </Menu.Item>
+                <Menu.Item key="2">
+                  <Link to="/fangyuan">房源</Link>
                 </Menu.Item>
                 {/* <Menu.Item key="2">
                   <Link to="/assignment">任务页</Link>
@@ -78,7 +81,8 @@ export default class Nav extends Component {
                 <Route>
                   <div>
                     <Route path="/home" component={Home} />
-                    <Route path="/assignment/:id" component={Assignment} />
+                    <Route path="/assignment/:id" component={Assignment} />                    
+                    <Route path="/fangyuan" component={FangYuan} />
                     <Route path="/detail" component={Detail} />
                   </div>
                 </Route>
