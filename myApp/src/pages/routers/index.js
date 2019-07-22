@@ -19,7 +19,7 @@ export default class Routers extends Component {
         <div>
           <Route path="/" exact component={Login} />
           <Route path="/home" component={Nav} />
-          <Route path="/assignment" component={Nav} />
+          <Route path="/assignment/:id" component={Nav} />
           <Route path="/detail" component={Nav} />
         </div>
       </Router>

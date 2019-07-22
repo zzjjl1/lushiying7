@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { browserHistory } from "react-router";
+import { Link } from "react-router-dom";
 import axios from 'axios'
 
 import './index.less'
@@ -10,29 +9,33 @@ export default class Home extends Component {
   constructor() {
     super();
     this.state = {
-      taskListData: null,
+      taskListData: [],
     };
   }
 
   componentWillMount() {
-    axios.get('47.106.74.64:8888/task/list').then(data => {
-      console.log(data)
+    axios.get('http://47.106.74.64:8888/task/list').then(reps => {
+      this.setState({
+        taskListData: reps.data.data
+      });
     }).catch((err) => {
-      console.log(err)
+      // 发送埋点
     })
-    const data = [
-      {},
-      {},
-      {},
-    ]
-    this.setState({
-      taskListData: data,
-    })
+  }
+
+  formatNum(num) {
+    return num > 9 ? num : '0' + num
   }
 
 
   render() {
     const taskListData = this.state.taskListData
+    const nowDate = new Date()
+    const sunDayTime =  (7 - nowDate.getDay()) * (24 * 60 * 60 * 1000) + nowDate.getTime()
+    const sunDayDate = new Date(sunDayTime)
+    const sunDay = `${sunDayDate.getFullYear()}
+      - ${this.formatNum(sunDayDate.getMonth() + 1)}
+      - ${this.formatNum(sunDayDate.getDate())}`
 
     const taskList = taskListData.map((task, index) =>
       <div className="content" key={index}>
@@ -43,8 +46,8 @@ export default class Home extends Component {
         </div>
         <p className="reward color-gray">任务奖励：20贝壳币</p>
         <div className="expire-time color-gray">
-          <span>过期时间：2019-07-23 23:59</span>
-          <button className="to-do">去完成</button>
+          <span>过期时间：{sunDay}</span>
+          <button className="to-do"><Link to={ '/assignment/' + task.code }>去完成</Link></button>
         </div>
       </div>
     )
