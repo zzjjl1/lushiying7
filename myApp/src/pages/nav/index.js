@@ -81,7 +81,7 @@ export default class Nav extends Component {
                 <Route>
                   <div>
                     <Route path="/home" component={Home} />
-                    <Route path="/assignment" component={Assignment} />
+                    <Route path="/assignment/:id" component={Assignment} />
                     <Route path="/detail" component={Detail} />
                     <Route path="/trace" component={Trace} />
                   </div>

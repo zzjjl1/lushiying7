@@ -1,73 +1,56 @@
-.page-home {
-  .ant-carousel {
-    height: 318px;
+.color-gray {
+  color: gray;
+}
+
+.main {
+  position: relative;
+  padding-right: 35px;
+  font-size: 14px;
+  
+  .header {
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    line-height: 50px;
+    font-size: 24px;
   }
-  .total {
-    background-color: #f0f2f5;
-    ul {
-      display: flex;
-      li {
-        padding: 5px 0;
-        flex-grow: 1;
-        height: 80px;
-        text-align: center;
-        // border-left:1px solid #cccccc;
-        border-right: 1px solid #cccccc;
-        i {
-          font-size: 40px;
-          color: #00a783;
-        }
-      }
-    }
+
+  .task-list .content{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 0 10px;
   }
-  h3 {
-    position: relative;
-    font-size: 20px;
-    color: #1f2328;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-bottom: 1px solid #d8d8d8;
-    margin-bottom: 20px;
-    font-weight: bold;
-    &.greenleft {
-      margin-left: -20px;
-      &:before {
-        content: "a";
-        background-color: #00b890;
-        margin-right: 12px;
-        color: #00b890;
-      }
-      border-bottom: 1px solid transparent;
-      margin-bottom: 0;
+  
+  .title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    .expire-tip {
+      color: bisque;
     }
   }
-  .out-link {
-    display: block;
-    //   padding: 20px;
-    width: 290px;
-    font-size: 14px;
-    color: #1f2227;
-    background-color: #fff;
-    p{
-      color:#60606c;
-    }
-    .out-img {
-      width: 250px;
-      overflow: hidden;
-      background-color: #fff;
-      // padding-top:50px;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    &:hover {
-      color: #00a783;
-      .out-img {
-        img {
-          transition: transform 0.3s ease-in-out;
-          transform: scale(1.1);
-        }
+
+  .reward {
+    margin-bottom: 8px;
+  }
+
+  .expire-time {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    .to-do {
+      background-color: dodgerblue;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+
+      a {
+        color: #fff;
       }
     }
   }
