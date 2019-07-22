@@ -45,11 +45,24 @@ import axios from "axios";
 // export default ajax;
 
 
-var instance = axios.create({
-  baseURL: 'http://39.105.20.96:8080/',
-  timeout: 1000,
-  headers: sessionStorage.code?{'auth_code': sessionStorage.code}:null
+const instance = axios.create({
+  baseURL: 'http://47.106.74.64:8888/',
+  timeout: 3000,
+  headers: {
+    'Content-Type': 'application/json'
+  }
 });
+const HouseInstance = axios.create({
+  baseURL: 'http://47.106.74.64:8888/',
+  timeout: 3000,
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+export {
+  instance as Instance,
+  HouseInstance
+}
 export default function ajax(url,data){
   instance.post(url,data)
 }

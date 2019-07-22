@@ -8,13 +8,13 @@ module.exports = {
     contentBase: "./dist",
     historyApiFallback: true,
     quiet: false,
-    // proxy:{
-    //   '**':{
-    //     target:'http://172.20.10.6:8080',
-    //     secure:false,
-    //     changeOrigin:true
-    //   }
-    // }
+    proxy:{
+      '/house':{
+        target:'http://47.106.74.64:8888',
+        secure:false,
+        changeOrigin:true
+      }
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

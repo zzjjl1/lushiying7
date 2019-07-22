@@ -23,13 +23,14 @@ export default class Nav extends Component {
             <Sider>
               <Menu mode="inline" defaultSelectedKeys={["1"]}>
                 <Menu.Item key="1">
-                  <Link to="/home">首页</Link>
+                  <Link to="/home">任务中心</Link>
                 </Menu.Item>
                 {/* <Menu.Item key="2">
                   <Link to="/assignment">任务页</Link>
                 </Menu.Item>
                 <Menu.Item key="3">
                   <Link to="/detail">详情页</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </Menu.Item>
                 <Menu.Item key="4">
@@ -38,6 +39,9 @@ export default class Nav extends Component {
 =======
                 </Menu.Item> */}
 >>>>>>> 35bc018083a3dd0e23a59d9d3336b884e974276b
+=======
+                </Menu.Item> */}
+>>>>>>> dev_hqx_trace
                 {/* <Menu.Item key="2">
                   <Link to="/rentDetail">租车类型</Link>
                 </Menu.Item>
@@ -87,7 +91,6 @@ export default class Nav extends Component {
                     <Route path="/home" component={Home} />
                     <Route path="/assignment/:id" component={Assignment} />
                     <Route path="/detail" component={Detail} />
-                    <Route path="/trace" component={Trace} />
                   </div>
                 </Route>
               </Content>
