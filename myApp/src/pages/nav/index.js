@@ -7,7 +7,7 @@ import Home from "../home";
 import Assignment from "../assignment";
 import Detail from "../detail";
 import Trace from "../../common/trace"
-
+import FangYuan from '../fangyuan'
 import "./index.less";
 
 const { SubMenu } = Menu;
@@ -25,23 +25,19 @@ export default class Nav extends Component {
                 <Menu.Item key="1">
                   <Link to="/home">任务中心</Link>
                 </Menu.Item>
+                <Menu.Item key="2">
+                  <Link to="/fangyuan">房源</Link>
+                </Menu.Item>
                 {/* <Menu.Item key="2">
                   <Link to="/assignment">任务页</Link>
                 </Menu.Item>
                 <Menu.Item key="3">
                   <Link to="/detail">详情页</Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </Menu.Item>
                 <Menu.Item key="4">
                   <Link to="/trace">跟进</Link>
                 </Menu.Item>
-=======
                 </Menu.Item> */}
->>>>>>> 35bc018083a3dd0e23a59d9d3336b884e974276b
-=======
-                </Menu.Item> */}
->>>>>>> dev_hqx_trace
                 {/* <Menu.Item key="2">
                   <Link to="/rentDetail">租车类型</Link>
                 </Menu.Item>
@@ -89,7 +85,8 @@ export default class Nav extends Component {
                 <Route>
                   <div>
                     <Route path="/home" component={Home} />
-                    <Route path="/assignment/:id" component={Assignment} />
+                    <Route path="/assignment/:id" component={Assignment} />                    
+                    <Route path="/fangyuan" component={FangYuan} />
                     <Route path="/detail" component={Detail} />
                   </div>
                 </Route>

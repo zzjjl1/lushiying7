@@ -40,19 +40,19 @@ export default class Assignment extends Component {
         <Card title="任务详情" style={{ marginBottom: '10px' }}>
           <div className="ass-table">
             <div className="ass-cell">
-              <div className="ass-cell1">任务名称</div>
+              <div className="ass-cell1">任务名称:</div>
               <div className="ass-cell2">补全10套房源的基本信息</div>
             </div>
             <div className="ass-cell">
-              <div className="ass-cell1">任务规则</div>
+              <div className="ass-cell1">任务规则:</div>
               <div className="ass-cell2">一周内累计共补全10套房源的基本信息，则表示任务完成，并发放贝壳币奖励和"房源保护者"称号</div>
             </div>
             <div className="ass-cell">
-              <div className="ass-cell1">奖励</div>
+              <div className="ass-cell1">任务奖励:</div>
               <div className="ass-cell2">20个贝壳币和为期一周的"房源保护者称号</div>
             </div>
             <div className="ass-cell">
-              <div className="ass-cell1">到期时间</div>
+              <div className="ass-cell1">到期时间:</div>
               <div className="ass-cell2">每周日23:59</div>
             </div>
           </div>
