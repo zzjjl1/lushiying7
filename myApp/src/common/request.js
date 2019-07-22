@@ -45,16 +45,23 @@ import axios from "axios";
 // export default ajax;
 
 
-var instance = axios.create({
-  baseURL: 'http://172.20.10.6:8888/',
+const instance = axios.create({
+  baseURL: 'http://172.20.10.10:8888/',
   timeout: 3000,
   headers: {
     'Content-Type': 'application/json'
   }
 });
-
+const HouseInstance = axios.create({
+  baseURL: 'http://192.168.43.127:8888/',
+  timeout: 3000,
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
 export {
-  instance as Instance
+  instance as Instance,
+  HouseInstance
 }
 export default function ajax(url,data){
   instance.post(url,data)
