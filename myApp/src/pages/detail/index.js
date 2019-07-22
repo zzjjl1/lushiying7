@@ -6,7 +6,8 @@ import {
 } from "antd";
 const { TabPane } = Tabs;
 import './index.less'
-import BasicInfoForm from './cmps/basic-info-form'
+import BasicInfoForm from './cmps/basic-info-form';
+import fyImage from '../../Images/fangyuan.png'
 
 export default class Assignment extends Component {
   constructor() {
@@ -22,7 +23,7 @@ export default class Assignment extends Component {
       <div className="house-detail">
         <div className="top-area">
           <div className="left-area">
-            房源详情页左边信息区域
+            <img src={fyImage} alt=""/>
           </div>
           <div className="right-area">
             <Tabs onChange={this.handleChangeTabs} type="card">
