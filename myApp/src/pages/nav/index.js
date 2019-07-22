@@ -24,12 +24,12 @@ export default class Nav extends Component {
                 <Menu.Item key="1">
                   <Link to="/home">首页</Link>
                 </Menu.Item>
-                <Menu.Item key="2">
+                {/* <Menu.Item key="2">
                   <Link to="/assignment">任务页</Link>
                 </Menu.Item>
                 <Menu.Item key="3">
                   <Link to="/detail">详情页</Link>
-                </Menu.Item>
+                </Menu.Item> */}
                 {/* <Menu.Item key="2">
                   <Link to="/rentDetail">租车类型</Link>
                 </Menu.Item>
