@@ -17,19 +17,27 @@
   .task-list .content{
     box-sizing: border-box;
     display: inline-block;
-    width: 50%;
+    width: 30%;
     margin-bottom: 10px;
     padding: 0 10px;
   }
   
   .title {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    position: relative;
     margin-bottom: 8px;
 
     .expire-tip {
       color: bisque;
+    }
+
+    .show-rule {
+      position: absolute;
+      right: 0;
+      transform: translateX(-10px);
+      cursor: pointer;
+    }
+    .show-rule:hover {
+      border-bottom: 1px solid #ccc;
     }
   }
 
