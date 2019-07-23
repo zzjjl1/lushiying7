@@ -41,7 +41,6 @@ export default class Assignment extends Component {
   }
   handleChangeHouseInfoTab = (checked) => {
     this.setState({activeKey:checked})
-    debugger
   }
   goToEdit = () => {
     this.setState({activeKey:'2', isShowTraceModal: false, editStatus:'true'})

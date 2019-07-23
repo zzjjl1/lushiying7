@@ -54,7 +54,7 @@ class AdminInfo extends Component {
     return (
       <span className="admin-info">
         <a href="/">
-          <span className="admin-title">第七战队牛逼</span>
+          <span className="admin-title">第七战队-首席体验官</span>
         </a>
       </span>
     );

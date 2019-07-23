@@ -28,6 +28,7 @@ class BasicInfoForm extends React.Component {
   }
   getDetail = () => {
     let _this = this;
+    debugger
     axios.get('http://47.106.74.64:8888/house/detail',{
     // axios.get('http://172.20.10.11:8888/house/detail',{
       params: {
@@ -87,7 +88,7 @@ class BasicInfoForm extends React.Component {
       .catch(function (error) {
         console.log(error);
         message.error('修改失败！');
-        _this.handleCancel();
+        // _this.handleCancel();
       });
   };
   handleCancel = () => {
