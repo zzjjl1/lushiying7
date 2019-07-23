@@ -24,13 +24,28 @@ export default class Assignment extends Component {
     };
     this.columns = [
       {
-        title: '建筑年代',
-        dataIndex: 'buildingYear',
+        title: '房源名称',
+        dataIndex: 'code',
         align: 'center'
       },
       {
         title: '商圈',
         dataIndex: 'bizCicle',
+        align: 'center'
+      },
+      {
+        title: '省份',
+        dataIndex: 'province',
+        align: 'center'
+      },
+      {
+        title: '建筑年代',
+        dataIndex: 'buildingYear',
+        align: 'center'
+      },
+      {
+        title: '建筑结构',
+        dataIndex: 'buildingStructure',
         align: 'center'
       },
       {

@@ -24,7 +24,7 @@ class BasicInfoForm extends React.Component {
     this.getDetail();
   }
   componentWillReceiveProps(nextProps) {
-    this.setState({isEdit:true})
+    // this.setState({isEdit:true})
   }
   getDetail = () => {
     let _this = this;
@@ -97,7 +97,6 @@ class BasicInfoForm extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     const { isEdit } = this.state;
-    const { formLayout } = this.state;
     const popoverStyle = {width:'500px'}
     const content = (
       <div>

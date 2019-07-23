@@ -93,7 +93,7 @@ export default class Assignment extends Component {
         </div>
         <Modal
           visible={this.state.isShowTraceModal}
-          title={<div><label>输入跟进信息</label><a onClick={this.goToEdit}>填房源基础信息，发贝壳币、赢专属展位</a></div>}
+          title={<div><label>输入跟进信息</label><a onClick={this.goToEdit} style={{fontSize:'12px'}}>&nbsp;&nbsp;填房源基础信息，发贝壳币、赢专属展位></a></div>}
           cancelText="取消"
           okText="确认"
           footer={null}
