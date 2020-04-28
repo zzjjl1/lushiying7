@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  IndexRoute
+  IndexRoute,
 } from "react-router-dom";
 import { Button, Card, Input, message } from "antd";
 import axios from "axios";
@@ -23,17 +23,17 @@ export default class Login extends Component {
       registeWord: undefined,
       againWord: undefined,
       name: undefined,
-      phone: undefined
+      phone: undefined,
     };
     this.tabList = [
       {
         key: "login",
-        tab: "登录"
+        tab: "登录",
       },
       {
         key: "registe",
-        tab: "注册"
-      }
+        tab: "注册",
+      },
     ];
 
     this.contentList = {
@@ -41,14 +41,14 @@ export default class Login extends Component {
         <div>
           <Input
             placeholder="账号"
-            onChange={e => {
+            onChange={(e) => {
               this.setState({ userName: e.target.value });
             }}
           />
           <Input
             placeholder="密码"
             type="passWord"
-            onChange={e => {
+            onChange={(e) => {
               this.setState({ passWord: e.target.value });
             }}
           />
@@ -65,33 +65,33 @@ export default class Login extends Component {
         <div>
           <Input
             placeholder="账号"
-            onChange={e => {
+            onChange={(e) => {
               this.setState({ registeName: e.target.value });
             }}
           />
           <Input
             placeholder="密码"
             type="passWord"
-            onChange={e => {
+            onChange={(e) => {
               this.setState({ registeWord: e.target.value });
             }}
           />
           <Input
             placeholder="再次确认密码"
             type="passWord"
-            onChange={e => {
+            onChange={(e) => {
               this.setState({ againWord: e.target.value });
             }}
           />
           <Input
             placeholder="昵称"
-            onChange={e => {
+            onChange={(e) => {
               this.setState({ name: e.target.value });
             }}
           />
           <Input
             placeholder="手机号"
-            onChange={e => {
+            onChange={(e) => {
               this.setState({ phone: e.target.value });
             }}
           />
@@ -103,12 +103,11 @@ export default class Login extends Component {
             注册
           </Button>
         </div>
-      )
+      ),
     };
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   login() {
     // axios({
@@ -167,13 +166,13 @@ export default class Login extends Component {
       againWord,
       name,
       phone,
-      userList
+      userList,
     } = this.state;
     if (registeName && registeWord && againWord && name && phone) {
-      const arr = userList.filter(item => {
+      const arr = userList.filter((item) => {
         return item.userName == registeName;
       });
-      const arr2 = userList.filter(item => {
+      const arr2 = userList.filter((item) => {
         return item.name == name;
       });
       if (arr.length != 0) {
@@ -187,20 +186,19 @@ export default class Login extends Component {
           userName: registeName,
           passWord: registeWord,
           name: name,
-          phone: phone
+          phone: phone,
         };
         axios({
           method: "post",
           url: "/user/registe",
-          data
-        })
-        .then(res=>{
-          if(res.data.ok){
-            message.success("注册成功")
-          }else{
-            message.error(res.data.message)
+          data,
+        }).then((res) => {
+          if (res.data.ok) {
+            message.success("注册成功");
+          } else {
+            message.error(res.data.message);
           }
-        })
+        });
         // ajax("POST","/user/registe",data)
         // const data = `add&../myApp/src/json/account.json&${JSON.stringify({
         //   userName: registeName,
@@ -219,8 +217,8 @@ export default class Login extends Component {
   render() {
     return (
       <div className="loginIn">
-        <div className="header">
-          {/* <p>广行</p> */}
+        {/* <div style={{ margin: "200px auto", fontSize: "50px" }}>啥也不是</div> */}
+        {/* <div className="header">
           <p>车辆租赁管理系统</p>
         </div>
         <Card
@@ -238,7 +236,7 @@ export default class Login extends Component {
           }}
         >
           {this.contentList[this.state.tabKey]}
-        </Card>
+        </Card> */}
       </div>
     );
   }
